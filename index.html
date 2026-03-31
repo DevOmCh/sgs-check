@@ -92,17 +92,16 @@
                 <div>
                     <label for="idcard" class="block text-[11px] font-bold text-gray-400 uppercase tracking-widest mb-2 ml-1">เลขประจำตัวประชาชน</label>
                     <div class="relative">
-                        <input 
-                            name="idcard" 
-                            id="idcard"
-                            maxlength="13"
-                            required
-                            type="text" 
-                            inputmode="numeric"
-                            placeholder="ไม่ต้องใส่ขีด (-)" 
-                            class="w-full px-5 py-4 bg-white border-2 border-blue-50 rounded-2xl focus:border-blue-500 outline-none transition-all text-2xl text-center font-bold tracking-widest text-gray-700 shadow-sm"
-                            oninput="this.value = this.value.replace(/[^0-9]/g, '');"
-                        />
+                       <input 
+    name="idcard" 
+    id="idcard"
+    maxlength="13"
+    required
+    type="text" 
+    placeholder="กรอกเลขบัตร หรือ G-Code" 
+    class="w-full px-5 py-4 bg-white border-2 border-blue-50 rounded-2xl focus:border-blue-500 outline-none transition-all text-2xl text-center font-bold tracking-widest text-gray-700 shadow-sm"
+    oninput="this.value = this.value.toUpperCase();" 
+/>
                     </div>
                 </div>
                 
