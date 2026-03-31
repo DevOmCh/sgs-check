@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ระบบตรวจสอบผลการเรียนออนไลน์ - โรงเรียนวัดร้องอ้อ</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    body { 
+      font-family: 'Sarabun', sans-serif; 
+      background-color: #f8fafc; /* สีพื้นหลังโทนสว่างสบายตา */
+    }
+
+    /* --- ตกแต่งฟอร์มต้นฉบับของ สพฐ. โดยอ้างอิงจาก Tag เพื่อไม่ให้กระทบโครงสร้าง --- */
+    .sgs-form-wrapper form {
+      width: 100%;
+      margin-top: 1rem;
+    }
+    
+    .sgs-form-wrapper input[name='idcard'] {
+      width: 100%;
+      padding: 0.875rem 1rem;
+      border: 1px solid #cbd5e1;
+      border-radius: 0.5rem;
+      font-size: 1.125rem;
+      letter-spacing: 0.1em;
+      outline: none;
+      transition: all 0.3s;
+      box-sizing: border-box;
+      margin-bottom: 1.25rem;
+      box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.03);
+    }
+
+    .sgs-form-wrapper input[name='idcard']:focus {
+      border-color: #2563eb;
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+    }
+
+    .sgs-form-wrapper button[type='submit'] {
+      width: 100%;
+      background-color: #1d4ed8;
+      color: white;
+      font-size: 1.125rem;
+      font-weight: 600;
+      padding: 0.875rem 1rem;
+      border-radius: 0.5rem;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.1s;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+
+    .sgs-form-wrapper button[type='submit']:hover {
+      background-color: #1e40af;
+    }
+
+    .sgs-form-wrapper button[type='submit']:active {
+      transform: scale(0.98);
+    }
+
+    /* คลาสสำหรับแจ้งเตือนขอบสีแดงเวลากรอกผิด */
+    .error-border {
+      border-color: #ef4444 !important;
+      box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2) !important;
+    }
+  </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+  <header class="bg-blue-800 text-white shadow-md py-4">
+    <div class="container mx-auto px-6 flex justify-between items-center max-w-5xl">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-blue-800 font-bold text-xs">
+          โลโก้
+        </div>
+        <div>
+          <h1 class="text-lg font-bold tracking-wide">โรงเรียนวัดร้องอ้อ</h1>
+          <p class="text-xs text-blue-200">ระบบบริหารจัดการผลการเรียน (SGS)</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-grow flex items-center justify-center py-10 px-4">
+    <div class="container mx-auto max-w-4xl flex flex-col md:flex-row items-center gap-10">
+      
+      <div class="w-full md:w-1/2 text-center md:text-left">
+        <span class="inline-block py-1 px-3 rounded-full bg-blue-100 text-blue-800 text-sm font-semibold mb-4">
+          ปีการศึกษา 2568
+        </span>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-gray-800 leading-tight mb-4">
+          ตรวจสอบผลการเรียน <br> <span class="text-blue-600">ออนไลน์ได้ทันที</span>
+        </h2>
+        <p class="text-gray-600 text-base md:text-lg mb-8 leading-relaxed">
+          บริการสำหรับนักเรียนและผู้ปกครอง เพื่อตรวจสอบผลการเรียนผ่านระบบ SGS ของสำนักงานคณะกรรมการการศึกษาขั้นพื้นฐาน (สพฐ.)
+        </p>
+        
+        <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-100 inline-block text-left w-full max-w-sm">
+          <h4 class="font-semibold text-gray-700 mb-2 flex items-center gap-2">
+            <svg class="w-5 h-5 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            ข้อแนะนำก่อนใช้งาน
+          </h4>
+          <ul class="text-sm text-gray-600 space-y-2 list-disc list-inside">
+            <li>เตรียมเลขประจำตัวประชาชน 13 หลัก</li>
+            <li>กรอกข้อมูลให้ครบถ้วนโดยไม่ต้องเว้นวรรค</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="w-full md:w-1/2 flex justify-center">
+        <div class="bg-white p-8 rounded-2xl shadow-xl w-
